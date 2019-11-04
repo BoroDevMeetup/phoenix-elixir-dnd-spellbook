@@ -1,0 +1,2 @@
+defmodule Spellbook do
+end
