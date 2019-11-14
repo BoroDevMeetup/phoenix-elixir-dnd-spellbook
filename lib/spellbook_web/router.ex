@@ -7,5 +7,7 @@ defmodule SpellbookWeb.Router do
 
   scope "/api", SpellbookWeb do
     pipe_through :api
+
+    resources "/spells", SpellController, except: [:new, :edit]
   end
 end
