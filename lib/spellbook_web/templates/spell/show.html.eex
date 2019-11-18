@@ -1,0 +1,21 @@
+<h2><%= @spell.name %></h2>
+<p><%= @spell.description %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Casting Time</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @spell.name %></td>
+      <td><%= @spell.level %></td>
+      <td><%= @spell.casting_time %></td>
+      <td><%= @spell.duration %></td>
+    </tr>
+  </tbody>
+</table>

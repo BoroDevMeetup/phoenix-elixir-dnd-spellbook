@@ -4,11 +4,16 @@ defmodule SpellbookWeb.SpellController do
   alias Spellbook.Spells
   alias Spellbook.Spells.Spell
 
-  action_fallback SpellbookWeb.FallbackController
+  action_fallback(SpellbookWeb.FallbackController)
 
   def index(conn, _params) do
     spells = Spells.list_spells()
     render(conn, "index.json", spells: spells)
+  end
+
+  def index_html(conn, _params) do
+    spells = Spells.list_spells()
+    render(conn, "index.html", spells: spells)
   end
 
   def create(conn, %{"spell" => spell_params}) do
@@ -23,6 +28,11 @@ defmodule SpellbookWeb.SpellController do
   def show(conn, %{"id" => id}) do
     spell = Spells.get_spell!(id)
     render(conn, "show.json", spell: spell)
+  end
+
+  def show_html(conn, %{"id" => id}) do
+    spell = Spells.get_spell!(id)
+    render(conn, "show.html", spell: spell)
   end
 
   def update(conn, %{"id" => id, "spell" => spell_params}) do

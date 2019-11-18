@@ -1,0 +1,11 @@
+<h2>Spells</h2>
+
+<ul>
+  <%= for spell <- @spells do %>
+    <li>
+      <a href="<%= Routes.spell_path(@conn, :show_html, spell) %>">
+        <%= spell.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
