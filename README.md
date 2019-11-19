@@ -2,6 +2,10 @@
 
 To start your Phoenix server:
 
+  * Make sure Docker/Docker Compose are installed
+  * `dc up --build -d`
+
+If you don't want to install docker
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
   * Start Phoenix endpoint with `mix phx.server`
